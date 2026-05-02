@@ -13,6 +13,11 @@ const settingsRoutes =  require('./routes/settingsRoutes');
 
 const app = express();
 
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://replog-app.onrender.com'], 
+    credentials: true
+}));
+
 // Connect to MongoDB
 connectDB();
 
