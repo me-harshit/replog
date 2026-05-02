@@ -402,7 +402,7 @@ export default function Settings() {
                                                                                         type="file"
                                                                                         accept="image/png, image/jpeg, image/webp, image/gif"
                                                                                         className="hidden"
-                                                                                        onChange={(e) => handleExerciseImageUpload(e, dayName, ex._id)}
+                                                                                        onChange={(e) => handleExerciseImageUpload(e, day.dayName, ex._id)}
                                                                                         disabled={uploadingExerciseImg === ex._id}
                                                                                     />
                                                                                 </label>
