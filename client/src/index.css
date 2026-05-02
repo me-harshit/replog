@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-app-bg text-text-primary antialiased;
+    /* Optional: Custom scrollbar for web */
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a #0f0f0f;
+  }
+}
+
+@layer components {
+  /* Core Card Styling */
+  .card {
+    @apply bg-app-card border border-app-border rounded-3xl shadow-lg;
+  }
+  
+  /* Primary Call to Action Button */
+  .btn-fire {
+    @apply bg-gradient-brand text-white font-bold rounded-xl 
+           shadow-[0_4px_15px_rgba(255,59,59,0.3)] 
+           hover:shadow-[0_6px_20px_rgba(255,122,24,0.4)] 
+           transition-all duration-300;
+  }
+
+  /* Secondary / Cancel Button */
+  .btn-ghost {
+    @apply bg-transparent border border-app-border text-text-primary font-bold rounded-xl 
+           hover:border-brand-orange hover:text-brand-orange 
+           transition-all duration-300;
+  }
+
+  /* Text Inputs */
+  .input-dark {
+    @apply bg-app-bg border border-app-border rounded-xl px-4 py-3 text-text-primary 
+           focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all;
+  }
+
+  /* Premium Gradient Text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-brand;
+  }
+
+  /* Success Glow (used for completed workouts) */
+  .glow-success {
+    @apply shadow-[0_0_20px_rgba(34,197,94,0.15)];
+  }
+  
+  /* Custom scrollbar for horizontal scrolling elements */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-app-border rounded-full;
+  }
+}
