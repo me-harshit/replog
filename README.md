@@ -78,3 +78,10 @@ RepLog strictly adheres to a modern gym aesthetic:
 ```bash
 git clone [https://github.com/yourusername/replog.git](https://github.com/yourusername/replog.git)
 cd replog
+
+
+### 2. Backend Infrastructure
+```bash
+cd server
+npm install
+
